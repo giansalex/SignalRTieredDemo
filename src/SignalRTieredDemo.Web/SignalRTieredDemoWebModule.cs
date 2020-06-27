@@ -37,6 +37,7 @@ using Volo.Abp.UI.Navigation.Urls;
 using Volo.Abp.UI;
 using Volo.Abp.UI.Navigation;
 using Volo.Abp.VirtualFileSystem;
+using Volo.Abp.AspNetCore.SignalR;
 
 namespace SignalRTieredDemo.Web
 {
@@ -51,7 +52,8 @@ namespace SignalRTieredDemo.Web
         typeof(AbpHttpClientIdentityModelWebModule),
         typeof(AbpIdentityWebModule),
         typeof(AbpTenantManagementWebModule),
-        typeof(AbpAspNetCoreSerilogModule)
+        typeof(AbpAspNetCoreSerilogModule),
+        typeof(AbpAspNetCoreSignalRModule)
         )]
     public class SignalRTieredDemoWebModule : AbpModule
     {

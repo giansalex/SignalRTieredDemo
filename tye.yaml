@@ -18,3 +18,10 @@ services:
     - name: https
       protocol: https
       port: 44340
+- name: rabbitmq
+  image: rabbitmq:3.8.5-alpine
+  bindings:
+  - name: http
+    port: 15672
+  - name: tcp
+    port: 5672

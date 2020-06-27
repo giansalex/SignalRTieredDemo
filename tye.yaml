@@ -1,0 +1,20 @@
+name: signalrtiereddemo
+services:
+- name: web
+  project: src/SignalRTieredDemo.Web/SignalRTieredDemo.Web.csproj
+  bindings:
+    - name: https
+      protocol: https
+      port: 44341
+- name: identity-server
+  project: src/SignalRTieredDemo.IdentityServer/SignalRTieredDemo.IdentityServer.csproj
+  bindings:
+    - name: https
+      protocol: https
+      port: 44320
+- name: http-api-host
+  project: src/SignalRTieredDemo.HttpApi.Host/SignalRTieredDemo.HttpApi.Host.csproj
+  bindings:
+    - name: https
+      protocol: https
+      port: 44340

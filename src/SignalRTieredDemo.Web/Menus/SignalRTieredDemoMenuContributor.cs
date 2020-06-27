@@ -44,6 +44,7 @@ namespace SignalRTieredDemo.Web.Menus
             var l = context.GetLocalizer<SignalRTieredDemoResource>();
 
             context.Menu.Items.Insert(0, new ApplicationMenuItem("SignalRTieredDemo.Home", l["Menu:Home"], "~/"));
+            context.Menu.Items.Add(new ApplicationMenuItem("SignalRDemo.Chat", "Chat", "/Chat"));
 
             return Task.CompletedTask;
         }

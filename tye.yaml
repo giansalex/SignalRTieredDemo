@@ -21,7 +21,5 @@ services:
 - name: rabbitmq
   image: rabbitmq:3.8.5-alpine
   bindings:
-  - name: http
-    port: 15672
-  - name: tcp
-    port: 5672
+    - port: 5672
+      protocol: rabbitmq

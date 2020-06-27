@@ -1,4 +1,7 @@
 name: signalrtiereddemo
+extensions:
+  - name: zipkin
+
 services:
 - name: web
   project: src/SignalRTieredDemo.Web/SignalRTieredDemo.Web.csproj

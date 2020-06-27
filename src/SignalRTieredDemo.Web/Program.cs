@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
 using Serilog;
@@ -25,6 +26,7 @@ namespace SignalRTieredDemo.Web
             try
             {
                 Log.Information("Starting web host.");
+                Activity.DefaultIdFormat = ActivityIdFormat.W3C;
                 CreateHostBuilder(args).Build().Run();
                 return 0;
             }
